@@ -38,7 +38,7 @@
         NSLog(@"%@", [NSThread callStackSymbols]);
         
         [[NSException exceptionWithName:NSInvalidArgumentException
-                                 reason:[NSString stringWithFormat:@"*** -[%@ %s]: '%@' cannot be nil.", [self class], _cmd, name]
+                                 reason:[NSString stringWithFormat:@"*** -[%@ %s]: '%@' cannot be nil.", [self class], (char*)_cmd, name]
                                userInfo:nil]raise];
     }
 }
